@@ -1,4 +1,5 @@
-# docker-nginx-webdav
+# Nginx WebDav Server (built from the official Nginx/Debian-Buster docker image)
+
 Incredibly secure, fast and light WebDav Server, built from Nginx official image - bare miniumum with no bells and whistles.
 
 ## How to use this image
