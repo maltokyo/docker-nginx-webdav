@@ -8,7 +8,6 @@ RUN apk -U upgrade \
 VOLUME /srv
 EXPOSE 80
 COPY webdav.conf /etc/nginx/conf.d/default.conf
-RUN rm /etc/nginx/sites-enabled/*
 
 COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
