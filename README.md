@@ -1,7 +1,5 @@
 # docker-nginx-webdav
- Fast Secure and Light Webdav Server
-
-Based on: https://github.com/jbbodart/alpine-nginx-webdav (thanks!)
+Incredibly secure, fast and light WebDav Server, built from Nginx official image - bare miniumum with no bells and whistles.
 
 ## How to use this image
 ```console
