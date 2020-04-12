@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx_webdav:
+    build: . #comment out this line if you are just pulling the docker hub image.
+#    ports: #enable this if you are not using reverse proxy, otherwise leave commented out
+#      - "80:80"
+    volumes:
+      - "/path/to/your/share:/srv"
+    environment:
+      USERNAME: your_webdav_user
+      PASSWORD: your_webdav_passwd
