@@ -20,3 +20,5 @@ To restrict access to only authorized users (recommended), you can define two en
 $ docker run --name webdav -p 80:80 -v /path/to/your/shared/files/:/srv/ -e USERNAME=webdav -e PASSWORD=webdav -d maltokyo/docker-nginx-webdav
 
 ```
+
+(Inspired from https://github.com/jbbodart/alpine-nginx-webdav - but "upgraded" to debian-buster image with all WebDav functionality enabled to work perfectly with MacOS OSX and Windows 10)
