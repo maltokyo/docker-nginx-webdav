@@ -2,9 +2,9 @@ FROM nginx:latest
 
 LABEL maintainer="maltokyo"
 
-RUN apt-get update && apt-get install -y nginx-extras apache2-utils
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y nginx-extras apache2-utils
 
-VOLUME /srv
+VOLUME /media
 EXPOSE 80
 COPY webdav.conf /etc/nginx/conf.d/default.conf
 RUN rm /etc/nginx/sites-enabled/*
