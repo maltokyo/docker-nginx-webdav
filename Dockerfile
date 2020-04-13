@@ -2,7 +2,7 @@ FROM nginx:latest
 
 LABEL maintainer="maltokyo"
 
-RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y nginx-extras
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y nginx-extras apache2-utils
 
 VOLUME /media
 EXPOSE 80
