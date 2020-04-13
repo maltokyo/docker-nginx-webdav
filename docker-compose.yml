@@ -6,7 +6,7 @@ services:
 #    ports: # enable this if you are not using reverse proxy, otherwise leave commented out
 #      - "80:80"
     volumes:
-      - "/path/to/your/share:/media/data"
+      - "/path/to/your/share:/media"
     environment:
       USERNAME: your_webdav_user
       PASSWORD: your_webdav_passwd
