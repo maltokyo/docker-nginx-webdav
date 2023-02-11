@@ -4,7 +4,7 @@ Incredibly secure, fast and light WebDav Server, built from Nginx official image
 
 ## How to use this image
 ```console
-$ docker run --name keepass-webdav -p 80:80 -v /path/to/your/keepass/files/:/media/ -d maltokyo/docker-nginx-webdav
+$ docker run --name keepass-webdav -p 80:80 -v /path/to/your/keepass/files/:/media/data -d maltokyo/docker-nginx-webdav
 ```
 
 Or use the docker-compose file included in this repository.
@@ -12,12 +12,12 @@ Or use the docker-compose file included in this repository.
 No built-in TLS support. Reverse proxy with TLS recommended
 
 ## Volumes
-- `/media` - served directory
+- `/media/data` - served directory
 
 ## Authentication
 To restrict access to only authorized users (recommended), you can define two environment variables: `$USERNAME` and `$PASSWORD`
 ```console
-$ docker run --name webdav -p 80:80 -v /path/to/your/shared/files/:/media/ -e USERNAME=webdav -e PASSWORD=webdav -d maltokyo/docker-nginx-webdav
+$ docker run --name webdav -p 80:80 -v /path/to/your/shared/files/:/media/data -e USERNAME=webdav -e PASSWORD=webdav -d maltokyo/docker-nginx-webdav
 
 ```
 
