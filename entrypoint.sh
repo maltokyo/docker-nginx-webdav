@@ -7,7 +7,7 @@ fi
 
 if [[ -n "$USERNAME" ]] && [[ -n "$PASSWORD" ]]
 then
-	htpasswd -bc /etc/nginx/htpasswd $USERNAME $PASSWORD
+	htpasswd -bc /etc/nginx/htpasswd "$USERNAME" "$PASSWORD"
 	echo Done.
 else
     echo Using no auth.
