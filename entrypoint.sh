@@ -1,8 +1,13 @@
 #!/bin/bash
+if [[ -n "$USERNAME_FILE" ]] && [[ -n "$PASSWORD_FILE" ]]
+then
+  USERNAME=$(cat "$USERNAME_FILE")
+  PASSWORD=$(cat "$PASSWORD_FILE")
+fi
 
 if [[ -n "$USERNAME" ]] && [[ -n "$PASSWORD" ]]
 then
-	htpasswd -bc /etc/nginx/htpasswd $USERNAME $PASSWORD
+	htpasswd -bc /etc/nginx/htpasswd "$USERNAME" "$PASSWORD"
 	echo Done.
 else
     echo Using no auth.
